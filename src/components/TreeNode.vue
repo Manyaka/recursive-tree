@@ -1,10 +1,10 @@
 <template>
   <li class="node-tree">
-    <span class="label">{{ node.label }}</span>
+    <span class="label">{{ node.title }}</span>
 
-    <ul v-if="node.children && node.children.length">
+    <ul v-if="node.subitems && node.subitems.length">
       <TreeNode
-        v-for="(child, index) in node.children"
+        v-for="(child, index) in node.subitems"
         v-bind:key="index"
         v-bind:node="child"
       />
