@@ -1,11 +1,17 @@
 import { mount, shallowMount } from '@vue/test-utils';
 import App from '@/App.vue';
 import Tree from '@/components/Tree.vue';
+import TreeArray from '@/components/TreeArray';
 
 describe('Проверяем App.vue:', () => {
+  let shallowWrapper = shallowMount(App);
+
   it('содержит компонент Tree', () => {
-    let wrapper = shallowMount(App);
     // console.log(wrapper.html());
-    expect(wrapper.contains(Tree)).toBe(true);
+    expect(shallowWrapper.contains(Tree)).toBe(true);
+  });
+
+  it('содержит компонент TreeArray', () => {
+    expect(shallowWrapper.contains(TreeArray)).toBe(true);
   });
 });
