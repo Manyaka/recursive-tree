@@ -1,7 +1,11 @@
 <template>
   <div class="tree">
     <ul class="tree-list">
-      <TreeNode v-bind:node="treeData" />
+      <TreeNode
+        v-for="(node, index) in treeDataArray"
+        v-bind:key="`node_array_${index}`"
+        v-bind:node="node"
+      />
     </ul>
   </div>
 </template>
@@ -10,14 +14,14 @@
 import TreeNode from '@/components/TreeNode.vue';
 
 export default {
-  name: 'Tree',
+  name: 'TreeArray',
   components: {
     TreeNode
   },
   props: {
-    treeData: {
-      type: Object,
-      default: () => ({})
+    treeDataArray: {
+      type: Array,
+      default: () => []
     }
   }
 };

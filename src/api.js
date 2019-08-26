@@ -1,5 +1,7 @@
 export default {
-  root: 'root',
+  title: 'Меню',
+  url: 'https://path/to/something',
+  selected: true,
   subitems: [
     {
       title: 'Описание',
@@ -41,17 +43,3 @@ export default {
     }
   ]
 };
-
-/*export default {
-  title: 'A cool folder',
-  subitems: [
-    {
-      title: 'A cool sub-folder 1',
-      subitems: [
-        { title: 'A cool sub-sub-folder 1' },
-        { title: 'A cool sub-sub-folder 2' }
-      ]
-    },
-    { title: 'This one is not that cool' }
-  ]
-};*/
