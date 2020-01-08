@@ -4,8 +4,8 @@
 
     <ul v-if="node.subitems && node.subitems.length">
       <TreeNode
-        v-for="(child, index) in node.subitems"
-        v-bind:key="`subitems_${index}`"
+        v-for="child in node.subitems"
+        v-bind:key="child.id"
         v-bind:node="child"
       />
     </ul>
