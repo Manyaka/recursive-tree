@@ -1,8 +1,10 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    es6: true
   },
+  parser: 'vue-eslint-parser',
   parserOptions: {
     parser: 'babel-eslint'
   },
